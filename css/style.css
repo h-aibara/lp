@@ -44,6 +44,11 @@ img {
     -webkit-justify-content: center;
     -ms-justify-content: center;
     background: rgb(0, 0, 139);
+    z-index: 1000;
+}
+
+.parent li ul {
+    z-index: 100
 }
 
 .parent li {
@@ -175,4 +180,77 @@ menu li img {
     height: 30px;
     width: 150px;
     vertical-align: top;
+}
+
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+
+
+/*画像の横幅を100%にしてレスポンシブ化*/
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    /*画像の下にできる余白を削除*/
+}
+
+
+/*メイン画像下に余白をつける*/
+
+.gallery {
+    margin: 0 0 5px 0;
+}
+
+
+/*-----------矢印表示----------*/
+
+.slick-next {
+    right: 0!important;
+}
+
+.slick-prev {
+    left: 0!important;
+}
+
+.slick-arrow {
+    z-index: 2!important;
+}
+
+.slick-arrow:before {
+    content: ""!important;
+    width: 100%!important;
+    height: 100%!important;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slick-next:before {
+    background: url(//images/arrow_right.png)!important;
+    background-size: contain!important;
+}
+
+.slick-prev:before {
+    background: url(//images/arrow_left.png)!important;
+    background-size: contain!important;
+}
+
+
+/*------------------------------*/
+
+
+/*選択するサムネイル画像の設定*/
+
+.choice-btn {
+    cursor: pointer;
+    outline: none;
+    list-style: none;
+}
+
+.slider-container {
+    width: 100%;
+    margin: 0 auto;
 }

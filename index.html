@@ -8,8 +8,14 @@
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="https://designsupply-web.com/assets/vender/bootstrap/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/index.js"></script>
     <title>Document</title>
 </head>
 
@@ -35,10 +41,10 @@
                                     <li>
                                         文字サイズ:
                                     </li>
-                                    <li>
-                                        <img src="images/fontsize_s.png" alt="フォントサイズ小">
-                                        <img src="images/fontsize_m.png" alt="フォントサイズ中">
-                                        <img src="images/fontsize_l.png" alt="フォントサイズ大">
+                                    <li class="font_size">
+                                        <img class="small" src="images/fontsize_s.png" alt="フォントサイズ小">
+                                        <img class="middle" src="images/fontsize_m.png" alt="フォントサイズ中">
+                                        <img class="large" src="images/fontsize_l.png" alt="フォントサイズ大">
                                     </li>
                                     <li>
                                         <div>
@@ -118,38 +124,24 @@
             </div>
         </div>
     </header>
-
-    <script>
-        $(function() {
-            var parentList = $(".parent");
-            var parentListTrig = $(".parent > li");
-            var childList = $(".child");
-            var childListTrig = $(".child > li");
-
-            parentListTrig.hover(
-
-                function() {
-                    $(this).css({
-                        backgroundColor: "#16a089d2"
-                    })
-                    $(this).children('.child').slideDown('fast');
-                },
-                function() {
-                    $(this).css({
-                        backgroundColor: "rgb(0, 0, 139)"
-                    })
-                    $(this).children('.child').slideUp('fast');
-                },
-            );
+    <main class="wrapper">
+        <div class="slider-container">
+            <div class="gallery">
+                <img src="images/main01.png" alt="">
+                <img src="images/main02.png" alt="">
+                <img src="images/main03.png" alt="">
+            </div>
+            <div class="choice-btn">
+                <img src="images/main01_thumb.png" alt="">
+                <img src="images/main02_thumb.png" alt="">
+                <img src="images/main03_thumb.png" alt="">
+            </div>
 
 
-            childListTrig.hover(function() {
-                $(this).children('.grandchild').show('fast');
-            }, function() {
-                $(this).children('.grandchild').hide('fast');
-            });
-        });
-    </script>
+        </div>
+
+
+    </main>
 
 </body>
 
