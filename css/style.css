@@ -1,0 +1,175 @@
+@charset "UTF-8";
+
+/* 共通部分
+-------------------------- */
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* HEADER
+-------------------------- */
+
+.logo {
+    margin-top: 10px;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    /* text-transformとはテキストにおける英数字の大文字、小文字の表示を指定するプロパティです。
+以下の値で指定します。
+*/
+    text-transform: uppercase;
+    list-style: none;
+    display: -webkit-flex;
+    display: -ms-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    background: darkblue;
+}
+
+.main-nav li {
+    position: relative;
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+    flex-basis: 25%;
+    -webkit-flex-basis: 25%;
+    -ms-flex-basis: 25%;
+    color: #fff;
+    /* margin-left: 20px; */
+    border-right: 1px white solid;
+}
+
+.main-nav a {
+    color: #fff;
+}
+
+.main-nav a:hover {
+    color: #0bd;
+}
+
+.parent>li {
+    position: relative;
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+    flex-basis: 25%;
+    -webkit-flex-basis: 25%;
+    -ms-flex-basis: 25%;
+    color: #fff;
+}
+
+.child {
+    position: absolute;
+    left: 0;
+    top: 80px;
+    background: #484848;
+    width: 100%;
+    display: none;
+}
+
+.child>li {
+    color: #fff;
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+    border-bottom: 1px solid #838383;
+}
+
+.grandchild {
+    position: absolute;
+    top: 0;
+    background: #8f8f8f;
+    z-index: 1;
+    width: 100%;
+    display: none;
+}
+
+.grandchild>li {
+    color: #fff;
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+    border-bottom: 1px solid #c3c3c3;
+}
+
+.parent>li:not(:last-child) .child>li .grandchild {
+    left: 100%;
+}
+
+.parent>li:last-child .child>li .grandchild {
+    right: 100%;
+}
+
+.page-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wrapper {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.site {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    /* 軸の設定(既定値がrowなので省略可能) */
+    flex-direction: row;
+    /* 主軸：左右の配置 */
+    justify-content: center;
+    /* 交差軸：上下の配置 */
+    align-items: center;
+}
+
+.menu li {
+    margin-left: 10px;
+}
+
+menu li img {
+    padding-top: 10px;
+}
+
+.guide {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: flex-end;
+}
+
+.guide li a {
+    padding-left: 10px;
+}
+
+.search_container input[type="text"] {
+    border: solid 1px;
+    height: 30px;
+    width: 150px;
+    vertical-align: top;
+}
