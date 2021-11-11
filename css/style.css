@@ -35,6 +35,7 @@ img {
     /* text-transformとはテキストにおける英数字の大文字、小文字の表示を指定するプロパティです。
 以下の値で指定します。
 */
+    flex-direction: row;
     text-transform: uppercase;
     list-style: none;
     display: -webkit-flex;
