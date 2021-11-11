@@ -54,11 +54,11 @@
             </div>
             <div>
                 <nav>
-                    <ul class="main-nav">
+                    <ul class="parent">
                         <li>
                             <a href="###">個人のお客様</a>
                             <ul class="child">
-                                <li>01-01
+                                <li>普通預金
                                     <ul class="grandchild">
                                         <li>01-01-01
                                         </li>
@@ -66,7 +66,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li>01-02
+                                <li>定期預金・積立
                                     <ul class="grandchild">
                                         <li>01-02-01
                                         </li>
@@ -74,7 +74,23 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li>01-03
+                                <li>外貨預金
+                                    <ul class="grandchild">
+                                        <li>01-03-01
+                                        </li>
+                                        <li>01-03-02
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>外債
+                                    <ul class="grandchild">
+                                        <li>01-03-01
+                                        </li>
+                                        <li>01-03-02
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>ファンドラップ
                                     <ul class="grandchild">
                                         <li>01-03-01
                                         </li>
@@ -105,15 +121,28 @@
 
     <script>
         $(function() {
-            var parentList = $(".main-nav");
-            var parentListTrig = $(".main-nav > li");
+            var parentList = $(".parent");
+            var parentListTrig = $(".parent > li");
             var childList = $(".child");
             var childListTrig = $(".child > li");
-            parentListTrig.hover(function() {
-                $(this).children('.child').slideDown('fast');
-            }, function() {
-                $(this).children('.child').slideUp('fast');
-            });
+
+            parentListTrig.hover(
+
+                function() {
+                    $(this).css({
+                        backgroundColor: "#16a089d2"
+                    })
+                    $(this).children('.child').slideDown('fast');
+                },
+                function() {
+                    $(this).css({
+                        backgroundColor: "rgb(0, 0, 139)"
+                    })
+                    $(this).children('.child').slideUp('fast');
+                },
+            );
+
+
             childListTrig.hover(function() {
                 $(this).children('.grandchild').show('fast');
             }, function() {
