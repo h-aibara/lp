@@ -29,7 +29,7 @@ img {
     margin-top: 10px;
 }
 
-.main-nav {
+.parent {
     display: flex;
     font-size: 1.25rem;
     /* text-transformとはテキストにおける英数字の大文字、小文字の表示を指定するプロパティです。
@@ -42,10 +42,10 @@ img {
     justify-content: center;
     -webkit-justify-content: center;
     -ms-justify-content: center;
-    background: darkblue;
+    background: rgb(0, 0, 139);
 }
 
-.main-nav li {
+.parent li {
     position: relative;
     text-align: center;
     height: 80px;
@@ -58,11 +58,11 @@ img {
     border-right: 1px white solid;
 }
 
-.main-nav a {
+.parent a {
     color: #fff;
 }
 
-.main-nav a:hover {
+.parent a:hover {
     color: #0bd;
 }
 
@@ -81,9 +81,10 @@ img {
     position: absolute;
     left: 0;
     top: 80px;
-    background: #484848;
+    background: #16a089d2;
     width: 100%;
     display: none;
+    list-style: none;
 }
 
 .child>li {
@@ -97,10 +98,11 @@ img {
 .grandchild {
     position: absolute;
     top: 0;
-    background: #8f8f8f;
+    background: darkblue;
     z-index: 1;
     width: 100%;
     display: none;
+    list-style: none;
 }
 
 .grandchild>li {
