@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="https://designsupply-web.com/assets/vender/bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="page-header wrapper">
+        <div class="container">
+            <div>
+                <ul class="site">
+                    <li>
+                        <a href="index.html"><img class="logo" src="images/logo.png" alt="セラク銀行"></a>
+                    </li>
+                    <li>
+                        <ul class="guide">
+                            <li>
+                                <a href="###">global site</a>
+                                <a href="###">site map</a>
+                            </li>
+                            <li>
+                                <ul class="menu">
+                                    <li>
+                                        金融機関コード:0917
+                                    </li>
+                                    <li>
+                                        文字サイズ:
+                                    </li>
+                                    <li>
+                                        <img src="images/fontsize_s.png" alt="フォントサイズ小">
+                                        <img src="images/fontsize_m.png" alt="フォントサイズ中">
+                                        <img src="images/fontsize_l.png" alt="フォントサイズ大">
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <form action="###" class="search_container">
+                                                <input type="text" name="" id="" placeholder="検索ワードを入力"><input type="image" src="images/search.png" alt="検索">
+                                            </form>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+            </div>
+            <div>
+                <nav>
+                    <ul class="main-nav">
+                        <li>
+                            <a href="###">個人のお客様</a>
+                            <ul class="child">
+                                <li>01-01
+                                    <ul class="grandchild">
+                                        <li>01-01-01
+                                        </li>
+                                        <li>01-01-02
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>01-02
+                                    <ul class="grandchild">
+                                        <li>01-02-01
+                                        </li>
+                                        <li>01-02-02
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>01-03
+                                    <ul class="grandchild">
+                                        <li>01-03-01
+                                        </li>
+                                        <li>01-03-02
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        </li>
+                        <li>
+                            <a href="">法人のお客様</a>
+                        </li>
+                        <li>
+                            <a href="">株主・投資家の皆様</a>
+                        </li>
+                        <li>
+                            <a href="">採用情報</a>
+                        </li>
+                        <li>
+                            <a href="">せらく銀行について</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        $(function() {
+            var parentList = $(".main-nav");
+            var parentListTrig = $(".main-nav > li");
+            var childList = $(".child");
+            var childListTrig = $(".child > li");
+            parentListTrig.hover(function() {
+                $(this).children('.child').slideDown('fast');
+            }, function() {
+                $(this).children('.child').slideUp('fast');
+            });
+            childListTrig.hover(function() {
+                $(this).children('.grandchild').show('fast');
+            }, function() {
+                $(this).children('.grandchild').hide('fast');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
