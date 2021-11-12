@@ -205,41 +205,47 @@ menu li img {
 }
 
 
-/*-----------矢印表示----------*/
+/*矢印の設定*/
 
-.slick-next {
-    right: 0!important;
-}
 
-.slick-prev {
-    left: 0!important;
-}
-
-.slick-arrow {
-    z-index: 2!important;
-}
+/* 矢印を消す */
 
 .slick-arrow:before {
     content: ""!important;
-    width: 100%!important;
-    height: 100%!important;
+}
+
+
+/*戻る、次へ矢印の位置*/
+
+.slick-prev,
+.slick-next {
     position: absolute;
-    top: 0;
-    left: 0;
+    /*絶対配置にする*/
+    z-index: 3;
+    top: 42%;
+    cursor: pointer;
+    /*マウスカーソルを指マークに*/
+    outline: none;
+    /*クリックをしたら出てくる枠線を消す*/
+    border-top: 5px solid #ccc;
+    /*矢印の色*/
+    border-right: 5px solid #ccc;
+    /*矢印の色*/
+    height: 25px;
+    width: 25px;
 }
 
-.slick-next:before {
-    background: url(//images/arrow_right.png)!important;
-    background-size: contain!important;
+.slick-prev {
+    /*戻る矢印の位置と形状*/
+    left: 2.5%;
+    transform: rotate(-135deg);
 }
 
-.slick-prev:before {
-    background: url(//images/arrow_left.png)!important;
-    background-size: contain!important;
+.slick-next {
+    /*次へ矢印の位置と形状*/
+    right: 2.5%;
+    transform: rotate(45deg);
 }
-
-
-/*------------------------------*/
 
 
 /*選択するサムネイル画像の設定*/
@@ -254,3 +260,149 @@ menu li img {
     width: 100%;
     margin: 0 auto;
 }
+
+
+/* コンテンツ部分 */
+
+.main-contents {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+
+/* サイドバー */
+
+aside {
+    width: 30%;
+}
+
+.login,
+.news {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-top: 10px;
+}
+
+.login li,
+.news li {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.service li {
+    text-align: center;
+}
+
+aside h2 {
+    color: darkblue;
+    text-align-last: center;
+    margin-top: 10px;
+}
+
+.btn {
+    font-weight: bold;
+    border-radius: 0%;
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+
+.btn p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 200px;
+    text-align: center;
+    /*一応BOX内の文字も中央寄せ*/
+    color: white;
+}
+
+.blue {
+    background-color: darkblue;
+}
+
+.green {
+    background-color: #73ff00;
+}
+
+.service-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style: none;
+    gap: 10px;
+    grid-template-rows: 100px 100px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.service-menu li {
+    background: #16a089d2;
+    display: table;
+    /*テーブル要素に変更*/
+    width: 100%;
+}
+
+.cell {
+    /*子要素*/
+    display: table-cell;
+    /*テーブルセル要素に変更*/
+    vertical-align: middle;
+    /*上下中央*/
+    line-height: 1.2em;
+    color: white;
+}
+
+aside img {
+    margin-top: 20px;
+}
+
+.link {
+    text-decoration: underline;
+}
+
+.service {
+    margin: 30px 0;
+}
+
+
+/* 記事部分 */
+
+article {
+    width: 70%;
+    margin-left: 35px;
+}
+
+article .category {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+article .topic {
+    margin-top: 20px;
+    list-style: none;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr;
+}
+
+article .item h3 {
+    padding-left: 15px;
+    border-width: 0 0 1px 15px;
+    border-style: solid;
+    border-color: #16a089d2;
+    margin-top: 30px;
+}
+
+article .category.item {
+    margin-bottom: 30px;
+}
+
+
+/* footer */
